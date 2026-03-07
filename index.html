@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Earth</title>
     <link rel="stylesheet" href="style/style.css">
+
+    <!-- tailwind & daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    
+
+    <main class="container mx-auto text-center">
+        <h2 class="text-[#15803D] font-bold text-4xl mb-10">Choose Your Trees</h2>
+
+        <div class="grid grid-cols-12 gap-8">
+
+            <!-- Categories -->
+            <div class="bg-white card card-body shadow-2xl col-span-3">
+                <h2 class=" text-2xl font-bold">Catagories</h2>
+                <div class="space-y-3">
+                    <button id="allTreesbtn" class="btn btn-success w-full">All Tree</button>
+
+                    <!-- Categories container -->
+                    <div id="categoriesContainer" class="space-y-3">
+                        <!-- Categories will be dynamically loadded here by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trees -->
+            <div class="bg-green-400 col-span-6">
+                Trees
+            </div>
+
+            <!-- Cart -->
+            <div class="bg-yellow-400 col-span-3">
+                Cart
+            </div>
+        </div>
+    </main>
 
 
     <script src="script/script.js"></script>
 </body>
+
 </html>
