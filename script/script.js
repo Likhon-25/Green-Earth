@@ -1,6 +1,8 @@
 console.log("Hello World");
 const categoriesContainer = document.getElementById("categoriesContainer")
 const treesContainer = document.getElementById("treeContainer")
+const loadingSpinner = document.getElementById("loadingSpinner")
+
 
 async function loadCategories() {
     // async
@@ -20,9 +22,19 @@ async function loadCategories() {
     });
 }
 
+function shoLoading() {
+    loadingSpinner.classList.remove("hidden");
+    loadingSpinner.classList.add("flex")
+    treesContainer.innerHTML = "";
+}
+function hideLoading() {
+    loadingSpinner.classList.add("hidden");
+}
 async function loadTrees() {
+    shoLoading()
     const res = await fetch("https://openapi.programming-hero.com/api/plants")
     const data = await res.json()
+    hideLoading()
     console.log(data);
     console.log(loadTrees);
 
