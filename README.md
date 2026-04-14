@@ -5,7 +5,7 @@
 ## 1. Get 🌴 All Categories
 
 ```bash
-https://openapi.programming-hero.com/api/categories
+  https://openapi.programming-hero.com/api/categories
 ```
 
 **Response:**
